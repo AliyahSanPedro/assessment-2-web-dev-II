@@ -1,0 +1,993 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;/*this is used to specify the behaviour of your scroll tab*/
+    display: flow-root;
+}
+
+body{
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+div, section, span, li, a, header{
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 50px;
+    align-items: center;/*defines how the web gives space between and around content.*/
+    position: fixed;
+    z-index: 999;/*so nav bar wont disappear even though tho user go to another section*/
+   
+    
+}
+
+#bar li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    margin-left: 155px;
+}
+
+ul{
+    height:50px;
+    position:fixed;
+    top:0; left:0;
+    display:inline-block;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    margin-left: 78px;
+    word-spacing: 59px;/*controls the spaces between words*/
+}
+
+    #first-ul li{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);/*let you apply affine linear transformations*/
+        color: white;
+        font-size: large;
+        line-height:130%;
+        font-family: 'Castoro Titling', cursive;
+        font-weight: 5;
+
+    }
+
+    .first-ul{
+        text-align:center;
+        color: white;
+        margin-bottom: 1%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: x-large;
+        font-family: 'Castoro Titling', cursive;
+        display: inline-block;
+        justify-content: justify;
+        white-space: nowrap;
+        line-height:115% ;
+       margin-top: 140px;
+       text-align: left;
+       margin-left: 450px;
+       position: absolute;
+       word-spacing: 1px;
+        }
+   
+#line{
+    width: 50%; 
+    margin-bottom: -50px; 
+    padding-left: 100px; 
+    margin: 50px auto; 
+    border: 1px solid #333;
+    font-weight: bold;
+}
+
+
+
+
+
+#bar li a{
+    color: rgb(114, 74, 74);
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+/*I applied different background colors for every sections using background-color property*/
+#HOME{
+   background-color: rgb(255, 255, 255);
+}
+
+#ABOUT{
+     background-color: rgb(255, 255, 255);
+}
+
+
+#TITLE{
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+    
+}
+#TITLE img {
+    width: 890px; /* Adjust the width of each character image */
+    height: 520px;
+    margin-right: 10px; /* Adjust the spacing between images */
+    margin-top: 2px;
+    }
+#PLOT{
+     background-color: rgb(3, 3, 64);
+}
+
+#SERIES{
+    background-color:rgb(255, 255, 255);
+}
+
+#REVIEWS{
+     background-color: rgb(58, 2, 58);
+}
+
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: large;
+    line-height:130%;
+    font-family: 'Castoro Titling', cursive;
+    font-weight: 5;
+}
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: xxx-large;
+    line-height:130%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+ h3{
+    font-size: small;
+    font-weight: lighter;
+    color:white;
+ }
+ h5{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size:2rem;
+    line-height:130%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 2%;
+
+ }
+
+ h6{
+    font-weight: 5%;
+    font-family: 'Roboto Mono', monospace;
+
+
+
+
+ } 
+    /* Add some styling for the round image */
+    #about-image {
+        float: left;
+        margin: 20px;
+        overflow: hidden;
+        margin-top: 80px;
+        margin-left: 80px;
+    }
+
+    #about-image img {
+        width: 570px; /* Adjust the width as needed */
+        height: 540px; /* Adjust the height as needed */
+        border-radius: 50%; /* Make the image circular */
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    /* Add some styling for the text on the right side */
+    #about-text {
+        float: right;
+        margin: 20px;
+        margin-top: 80px;
+        margin-right: 150px;
+        width: 400px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-size: 19.5px; 
+        line-height: 28px;
+        
+    }
+    #about2-text {
+        float: right;
+        margin: 20px;
+        margin-top: 80px;
+        margin-right: 150px;
+        width: 400px; /* Adjust the width as needed */
+        margin-top: 310px;
+        font-size: 50px;
+    }
+
+    /* Add some styling to the text in the About section to create space */
+    #ABOUT h1 {
+        margin-left: 150px; /* Adjust the margin based on the image width */
+       
+    }
+    
+    #BESTSELLERS {
+overflow-x: auto;
+white-space: nowrap;
+overflow-y: hidden; /* Hide vertical scrollbar */
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none; /* Internet Explorer/Edge */
+padding: 20px; /* Optional padding for better aesthetics */
+}
+
+#BESTSELLERS::-webkit-scrollbar {
+display: none; /* Safari and Chrome */
+}
+
+#BESTSELLERS img {
+width: 500px; /* Adjust the width of each character image */
+height: 700px;
+margin-right: 10px; /* Adjust the spacing between images */
+margin-top: 70px;
+}
+#video_box{
+    width:100%;
+    height:905px;
+    margin: 0%;
+    object-fit: cover;
+    
+}
+
+#TITLE img{
+    margin-top: 80px;
+    height: 750px;
+    width: 1200px;
+    margin-left: 40px;
+    
+}
+#TITLE {
+    position: relative;
+}
+
+#title-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#title-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+#TITLE {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    background-image: url('-1x-1.jpg'); /* Add your background image URL here */
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Set text color to white or light color for better visibility */
+ 
+}
+
+#title-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title-button {
+    padding: 10px 35px;
+    font-size: 19px;
+    background-color: BLACK;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove default button underline */
+    display: inline-block; /* Ensure inline-block to allow setting width and height */
+}
+#END1-text {
+    float: right;
+    margin-right: 430px;
+    width: 550px; /* Adjust the width as needed */
+    margin-top: 110px;
+    font-size: 26px; 
+    line-height: 50px;
+    
+}
+#END2-text{
+    float: right;
+    margin: 20px;
+    margin-top: -2px;
+    margin-right: 430px;
+    width: 400px; /* Adjust the width as needed */
+    margin-bottom: 100px;
+    font-size: 23px;
+    width: 550px;
+    line-height: 40px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-top: 20px;
+    
+}
+
+.social-icon {
+    margin: 0 10px;
+    margin-bottom: 15px;
+}
+
+.social-icon img {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+}
+
+#follow-text{
+    float: right;
+    margin-top: 53px;
+    margin-right: 480px;
+    width: 400px; /* Adjust the width as needed */
+    margin-bottom: 30px;
+    font-size: 53px;
+    line-height: 40px;
+}
+
+#END-text{
+    float: right;
+  color: rgb(140, 25, 75);
+    margin-top: 100px;
+    margin-right: 450px;
+    margin-bottom: 5px;
+    font-size: 79px;
+    line-height: 40px;
+    word-spacing: 10px;
+    font-weight: 800; 
+}
+
+#HOME {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Set height to 100% of the viewport height */
+}
+
+#home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire section */
+}
+
+@media only screen and (max-width: 1450px) and (min-width: 900) {
+    #bar li{
+        list-style: none;
+        display: inline-block;
+        margin: 20px;
+        margin-left: 155px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 20p;
+        margin-top: 50px;
+        margin-left: 350px;
+    }
+    
+    .social-icon {
+        margin: 0 10px;
+        margin-bottom: 15px;
+    }
+    
+    .social-icon img {
+        width: 60px; /* Adjust the size as needed */
+        height: 60px; /* Adjust the size as needed */
+    }
+
+    #follow-text{
+        float: right;
+        margin-top: 53px;
+        margin-right: -260px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 30px;
+        font-size: 53px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 770px) and (min-width: 432px) {
+    #bar li{
+        list-style: none;
+        display: inline-block;
+        margin: 20px;
+        margin-left: 25px;
+  }
+
+      /* Add some styling for the text on the right side */
+    #about-text {
+        float: right;
+        margin: 20px;
+        margin-right: 170px;
+        width: 400px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-size: 19.5px; 
+        line-height: 28px;
+        
+    }
+    #about2-text {
+        float: right;
+        margin: 20px;
+        margin-right: 170px;
+        width: 400px; /* Adjust the width as needed */
+        font-size: 50px;
+    }
+
+    #about-image img {
+        width: 570px; /* Adjust the width as needed */
+        height: 540px; /* Adjust the height as needed */
+        border-radius: 50%; /* Make the image circular */
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    #END-text{
+        float: right;
+        color: rgb(140, 25, 75);
+        margin-top: 100px;
+        margin-right:100px;
+        margin-bottom: 5px;
+        font-size: 79px;
+        line-height: 90px;
+        word-spacing: 10px;
+        font-weight: 800px; 
+    }
+    #END1-text {
+        float: right;
+        margin-right:100px;
+        width: 550px; /* Adjust the width as needed */
+        margin-top: 110px;
+        font-size: 26px; 
+        line-height: 50px;
+            
+    }
+    #END2-text{
+        float: right;
+        margin: 20px;
+        margin-top: -2px;
+        margin-right:100px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 100px;
+        font-size: 23px;
+        width: 550px;
+        line-height: 40px;
+    }
+
+    #follow-text{
+        float: right;
+        margin-top: 53px;
+        margin-right: 130px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 30px;
+        font-size: 53px;
+        line-height: 40px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 20p;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    
+    .social-icon {
+        margin: 0 10px;
+        margin-bottom: 15px;
+    }
+    
+    .social-icon img {
+        width: 60px; /* Adjust the size as needed */
+        height: 60px; /* Adjust the size as needed */
+    }
+
+ }
+
+ @media only screen and (max-width: 412px) and (min-width: 379px) {
+    #bar li{
+        list-style: none;
+        display: inline-block;
+        margin: 1px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+      /* Add some styling for the text on the right side */
+    #about-text {
+        float: right;
+        margin: 20px;
+        margin-right: -150px;
+        width: 400px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-size: 19.5px; 
+        line-height: 28px;
+        
+    }
+    #about2-text {
+        float: right;
+        margin: 20px;
+        margin-right: -150px;
+        width: 400px; /* Adjust the width as needed */
+        font-size: 50px;
+    }
+
+    #about-image img {
+        width: 570px; /* Adjust the width as needed */
+        height: 540px; /* Adjust the height as needed */
+        border-radius: 50%; /* Make the image circular */
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    #END-text{
+        float: right;
+        color: rgb(140, 25, 75);
+        margin-top: 100px;
+        margin-right:-200px;
+        margin-bottom: 5px;
+        font-size: 79px;
+        line-height: 90px;
+        word-spacing: 10px;
+        font-weight: 800px; 
+    }
+    #END1-text {
+        float: right;
+        margin-right:-200px;
+        width: 550px; /* Adjust the width as needed */
+        margin-top: 110px;
+        font-size: 26px; 
+        line-height: 50px;
+            
+    }
+    #END2-text{
+        float: right;
+        margin: 20px;
+        margin-top: -2px;
+        margin-right:-200px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 100px;
+        font-size: 23px;
+        width: 550px;
+        line-height: 40px;
+    }
+
+    #bar li a{
+        color: rgb(114, 74, 74);
+        text-decoration: none;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #home-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 700px;
+        height: 100%;
+        object-fit: cover; /* Ensure the video covers the entire section */
+    }
+
+    #BESTSELLERS img {
+        width: 600px; /* Adjust the width of each character image */
+        height: 700px;
+        margin-right: 10px; /* Adjust the spacing between images */
+        margin-top: 70px;
+        }
+
+    #BESTSELLERS {
+        overflow-x: auto;
+        white-space: nowrap;
+        overflow-y: hidden; /* Hide vertical scrollbar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer/Edge */
+        padding: 40px; /* Optional padding for better aesthetics */
+        width: 700px;
+        margin-top: 200px;
+    }
+
+    #TITLE img {
+        width: 890px; /* Adjust the width of each character image */
+        height: 520px;
+        margin-right: 10px; /* Adjust the spacing between images */
+        margin-top: 2px;
+    }
+
+    #TITLE img{
+        margin-top: 80px;
+        height: 750px;
+        width: 1200px;
+        margin-left: 40px;  
+    }
+
+    #TITLE{
+        width: 700px;
+        margin-top: 100px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 20p;
+        margin-top: 50px;
+        margin-left: 250px;
+    }
+    
+    .social-icon {
+        margin: 0 10px;
+        margin-bottom: 15px;
+    }
+    
+    .social-icon img {
+        width: 60px; /* Adjust the size as needed */
+        height: 60px; /* Adjust the size as needed */
+    }
+
+    #follow-text{
+        float: right;
+        margin-top: 53px;
+        margin-right: -160px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 30px;
+        font-size: 53px;
+        line-height: 40px;
+    }
+    #line{
+        margin-left: 170px;
+        
+    }
+
+    
+
+
+ }  
+
+ @media only screen and (max-width: 376px) and (min-width: 322px) {
+    #bar li{
+        list-style: none;
+        display: inline-block;
+        margin: 1px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+      /* Add some styling for the text on the right side */
+    #about-text {
+        float: right;
+        margin: 20px;
+        margin-right: -180px;
+        width: 400px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-size: 25px; 
+        line-height: 28px;
+        
+    }
+    #about2-text {
+        float: right;
+        margin: 20px;
+        margin-right: -180px;
+        width: 400px; /* Adjust the width as needed */
+        font-size: 60px;
+    }
+
+    #about-image img {
+        width: 570px; /* Adjust the width as needed */
+        height: 540px; /* Adjust the height as needed */
+        border-radius: 50%; /* Make the image circular */
+        margin-top: 10px;
+        margin-left: -2px;
+    }
+    #END-text{
+        float: right;
+        color: rgb(140, 25, 75);
+        margin-top: 100px;
+        margin-right:-250px;
+        margin-bottom: 5px;
+        font-size: 79px;
+        line-height: 90px;
+        word-spacing: 10px;
+        font-weight: 800px; 
+    }
+    #END1-text {
+        float: right;
+        margin-right:-250px;
+        width: 550px; /* Adjust the width as needed */
+        margin-top: 110px;
+        font-size: 26px; 
+        line-height: 50px;
+            
+    }
+    #END2-text{
+        float: right;
+        margin: 20px;
+        margin-top: -2px;
+        margin-right:-250px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 100px;
+        font-size: 23px;
+        width: 550px;
+        line-height: 40px;
+    }
+
+    #bar li a{
+        color: rgb(114, 74, 74);
+        text-decoration: none;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #home-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 700px;
+        height: 100%;
+        object-fit: cover; /* Ensure the video covers the entire section */
+    }
+
+    #BESTSELLERS img {
+        width: 600px; /* Adjust the width of each character image */
+        height: 700px;
+        margin-right: 10px; /* Adjust the spacing between images */
+        margin-top: 200px;
+        }
+
+    #BESTSELLERS {
+        overflow-x: auto;
+        white-space: nowrap;
+        overflow-y: hidden; /* Hide vertical scrollbar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer/Edge */
+        padding: 40px; /* Optional padding for better aesthetics */
+        width: 700px;
+        margin-top: 50px;
+    }
+
+    #TITLE img {
+        width: 890px; /* Adjust the width of each character image */
+        height: 520px;
+        margin-right: 10px; /* Adjust the spacing between images */
+        margin-top: 2px;
+    }
+
+    #TITLE img{
+        margin-top: 80px;
+        height: 750px;
+        width: 1200px;
+        margin-left: 40px;  
+    }
+
+    #TITLE{
+        width: 700px;
+        margin-top: 100px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 20p;
+        margin-top: 50px;
+        margin-left: 300px;
+    }
+    
+    .social-icon {
+        margin: 0 10px;
+        margin-bottom: 15px;
+    }
+    
+    .social-icon img {
+        width: 60px; /* Adjust the size as needed */
+        height: 60px; /* Adjust the size as needed */
+    }
+
+    #follow-text{
+        float: right;
+        margin-top: 53px;
+        margin-right: -200px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 30px;
+        font-size: 53px;
+        line-height: 40px;
+    }
+    #line{
+        margin-left: 170px;
+        font-weight:bold;
+        
+    }
+
+
+ }  
+
+ @media only screen and (max-width: 321px) and (min-width: 200px) {
+    #bar li{
+        list-style: none;
+        display: inline-block;
+        margin: 2px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+      /* Add some styling for the text on the right side */
+    #about-text {
+        float: right;
+        margin: 20px;
+        margin-right: -250px;
+        width: 400px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-size: 25px; 
+        line-height: 28px;
+        
+    }
+    #about2-text {
+        float: right;
+        margin: 20px;
+        margin-right: -260px;
+        width: 400px; /* Adjust the width as needed */
+        font-size: 60px;
+    }
+
+    #about-image img {
+        width: 570px; /* Adjust the width as needed */
+        height: 540px; /* Adjust the height as needed */
+        border-radius: 50%; /* Make the image circular */
+        margin-top: 10px;
+        margin-left: -2px;
+    }
+    #END-text{
+        float: right;
+        color: rgb(140, 25, 75);
+        margin-top: 100px;
+        margin-right:-300px;
+        margin-bottom: 5px;
+        font-size: 79px;
+        line-height: 90px;
+        word-spacing: 10px;
+        font-weight: 800px; 
+    }
+    #END1-text {
+        float: right;
+        margin-right:-300px;
+        width: 550px; /* Adjust the width as needed */
+        margin-top: 110px;
+        font-size: 26px; 
+        line-height: 50px;
+            
+    }
+    #END2-text{
+        float: right;
+        margin: 20px;
+        margin-top: -2px;
+        margin-right:-300px;
+        width: 400px; /* Adjust the width as needed */
+        margin-bottom: 100px;
+        font-size: 23px;
+        width: 550px;
+        line-height: 40px;
+    }
+
+    #bar li a{
+        color: rgb(114, 74, 74);
+        text-decoration: none;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #home-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 700px;
+        height: 100%;
+        object-fit: cover; /* Ensure the video covers the entire section */
+    }
+
+    #BESTSELLERS img {
+        width: 600px; /* Adjust the width of each character image */
+        height: 600px;
+        margin-right: 10px; /* Adjust the spacing between images */
+        margin-top: 2px;
+        }
+
+    #BESTSELLERS {
+        overflow-x: auto;
+        white-space: nowrap;
+        overflow-y: hidden; 
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+        padding: 40px; /* Optional padding for better aesthetics */
+        width: 700px;
+        height: 600px;
+        margin-top: 600px;
+    }
+
+    #TITLE img {
+        width: 890px;
+        height: 700px;
+        margin-right: 10px; 
+        margin-top: 2px;
+    }
+
+    #TITLE img{
+        margin-top: 80px;
+        height: 750px;
+        width: 1200px;
+        margin-left: 20px;  
+    }
+
+    #TITLE{
+        width: 700px;
+        height: 950px;
+        margin-top: 150px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin: 20p;
+        margin-top: 50px;
+        margin-left: 350px;
+    }
+    
+    .social-icon {
+        margin: 0 10px;
+        margin-bottom: 15px;
+    }
+    
+    .social-icon img {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    #follow-text{
+        float: right;
+        margin-top: 53px;
+        margin-right: -270px;
+        width: 400px; 
+        margin-bottom: 30px;
+        font-size: 53px;
+        line-height: 40px;
+    }
+    #line{
+        margin-left: 220px;
+    }
+    
+    }  
+    
